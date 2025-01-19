@@ -19,17 +19,19 @@
   <meta name="author" content="Jiahao Wang">
   <meta name="keywords" content="博客,CS,图论,算法,数据结构,机器学习,深度学习,C++,C,CS61A,CS61B,CS188,Python,Java,PyTorch">
   
-    <meta name="description" content="[TOC] 2048 Games编译环境我使用的Qt编译套件：Desktop Qt 6.5.8 MinGW 64-bit(只要是Qt6框架即可) Qt Creator版本：Qt Creator 15.0.0 (Enterprise)    注：Qt5框架在播放背景音乐时可能出现问题，因为Qt5中的setMedia在Qt6中改成了setSource  运行步骤exe运行直接双击2048.exe文件运">
+    <meta name="description" content="基于Qt6框架开发的2048游戏，实现存档，音乐等功能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2048（基于Qt6框架开发）">
 <meta property="og:url" content="http://wang-jiahao.github.io/posts/aaf64fe7.html">
 <meta property="og:site_name" content="Zackaria&#39;s Corner">
-<meta property="og:description" content="[TOC] 2048 Games编译环境我使用的Qt编译套件：Desktop Qt 6.5.8 MinGW 64-bit(只要是Qt6框架即可) Qt Creator版本：Qt Creator 15.0.0 (Enterprise)    注：Qt5框架在播放背景音乐时可能出现问题，因为Qt5中的setMedia在Qt6中改成了setSource  运行步骤exe运行直接双击2048.exe文件运">
+<meta property="og:description" content="基于Qt6框架开发的2048游戏，实现存档，音乐等功能">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-19T08:27:32.000Z">
-<meta property="article:modified_time" content="2025-01-19T08:30:46.516Z">
+<meta property="article:modified_time" content="2025-01-19T08:45:00.389Z">
 <meta property="article:author" content="Jiahao Wang">
-<meta property="article:tag" content="博客,CS,图论,算法,数据结构,机器学习,深度学习,C++,C,CS61A,CS61B,CS188,Python,Java,PyTorch">
+<meta property="article:tag" content="Qt6">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="Games">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -260,7 +262,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          1.5k 字
         
       </span>
     
@@ -271,7 +273,7 @@
         
         
         
-          16 分钟
+          17 分钟
         
       </span>
     
@@ -322,22 +324,20 @@
             
               <div class="markdown-body">
                 
-                <p>[TOC]</p>
-<h1 id="2048-Games"><a href="#2048-Games" class="headerlink" title="2048 Games"></a>2048 Games</h1><h2 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h2><p>我使用的Qt编译套件：<code>Desktop Qt 6.5.8 MinGW 64-bit</code>(只要是Qt6框架即可)</p>
+                <h1 id="2048-Games"><a href="#2048-Games" class="headerlink" title="2048 Games"></a>2048 Games</h1><h2 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h2><p>我使用的Qt编译套件：<code>Desktop Qt 6.5.8 MinGW 64-bit</code>(只要是Qt6框架即可)</p>
 <p>Qt Creator版本：<code>Qt Creator 15.0.0 (Enterprise)</code></p>
  <div style="background-color:#f1f9ff; border-left: 5px solid #4285f4; padding: 10px; margin-bottom: 10px;">  注：Qt5框架在播放背景音乐时可能出现问题，因为Qt5中的setMedia在Qt6中改成了setSource</div>
 
-<h2 id="运行步骤"><a href="#运行步骤" class="headerlink" title="运行步骤"></a>运行步骤</h2><h3 id="exe运行"><a href="#exe运行" class="headerlink" title="exe运行"></a>exe运行</h3><p>直接双击2048.exe文件运行即可(需要Qt6框架)</p>
+<h2 id="运行步骤"><a href="#运行步骤" class="headerlink" title="运行步骤"></a>运行步骤</h2><h3 id="exe运行"><a href="#exe运行" class="headerlink" title="exe运行"></a>exe运行</h3><p>将build&#x2F;Desktop_Qt_6_5_8_MinGW_64_bit-Release&#x2F;release文件夹中的exe文件下载下来，直接双击2048.exe文件运行即可(需要Qt6框架)</p>
+<p>若没有qt框架，可以将整个release文件夹下载下来，在文件夹里面运行exe文件。</p>
  <div style="background-color:#f1f9ff; border-left: 5px solid #4285f4; padding: 10px; margin-bottom: 10px;">  注：可能出现的2个问题：<br>
 1.弹窗显示找不到Qt6Core.dll。要么是Qt框架太老，要么是没有将Qt编译器加载到环境变量<br>
 2.一直在加载。正常情况，因为wav音频文件比较大，并且打包了所有依赖环境，耐心等待即可🥹</div>
 
-
-
 <h3 id="Qt编译运行"><a href="#Qt编译运行" class="headerlink" title="Qt编译运行"></a>Qt编译运行</h3><ol>
 <li>克隆到本地：</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone git@git.nju.edu.cn:wwwjjh/cpp-homework.git<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone git@github.com:wang-jiahao/2048.git<br></code></pre></td></tr></table></figure>
 
 <ol start="2">
 <li><p>删除<code>2048.pro.user</code>文件与<code>build</code>文件夹。</p>
@@ -356,9 +356,9 @@
 <li><b>当初我完成的Java版2048</b>: <a target="_blank" rel="noopener" href="https://github.com/wang-jiahao/CS61B/tree/master/proj0">https://github.com/wang-jiahao/CS61B/tree/master/proj0</a></li>
 </ul>
 </div>
+## 开发流程
 
-
-<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><ol>
+<ol>
 <li>先参考助教建议<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1g4411H78N/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=c06338b0283c611d7a47c62b0ed23dfa">视频</a>自学qt。</li>
 <li>下载最新版本的Qt Creator及其套件。</li>
 <li>创建通过qmake管理的项目。</li>
@@ -414,6 +414,45 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C/" class="category-chain-item">C++</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/C/Qt/" class="category-chain-item">Qt</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Qt6/" class="print-no-link">#Qt6</a>
+      
+        <a href="/tags/C/" class="print-no-link">#C++</a>
+      
+        <a href="/tags/Games/" class="print-no-link">#Games</a>
+      
+    </div>
   
 </div>
 
